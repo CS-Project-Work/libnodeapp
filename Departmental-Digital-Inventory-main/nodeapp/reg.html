@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <link rel="stylesheet"  href="reg.css">
+
+        <title>
+            Registration Page
+        </title>
+    </head>
+    <body>
+     <img src ="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/BMS_College_of_Engineering.svg/1200px-BMS_College_of_Engineering.svg.png" width="15%" align="center">
+    <h1>B.M.S. College Of Engineering</h1>
+    <h2>Department Of Computer Science and Engineering</h2>
+      <img src ="https://i.postimg.cc/wjzwswyt/img.png" width="100%" align="center">
+      <div class="circle">
+      <div class="content">
+        <h3>Salient features</h3>
+        </div>
+      </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form  onSubmit="return adminValidation(this);">
+                <h1>Teacher Registration</h1>
+                     
+                <input name = "first_name" type = "text" placeholder= "First Name" required/>
+                <input name = "last_name" type = "text" placeholder= "Last Name" required/>
+                <input name = "email" type="email" placeholder="Email" required/>
+        
+                <input name = "password" type="password" minlength = "10" placeholder="Password" required/>
+    <input name = "confirm" type="password" placeholder="Confirm Password" required/>
+                <button type="submit">REGISTER</button> 
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form  onSubmit = "return studValidation(this);">
+                <h1>Student Registration</h1>
+                                <p>                            </p>
+          <input name = "first_name" type = "text" placeholder= "First Name" required/>
+                <input name = "last_name" type = "text" placeholder= "Last Name" required/>
+         
+          <input name = "usn" type = "text" placeholder= "USN" required/>
+                <input name = "email" type="email" placeholder="Email" required/>
+                <input name = "password" type="password" minlength="10" placeholder="Password" required/>
+    <input name = "confirm" type="password" placeholder="Confirm Password" required/>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Student Registration</h1>
+                    <p>                            </p>
+                    <button class="ghost" id="signIn">Sign Up</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Teacher Registration</h1>
+                    <p>                            </p>
+                    <button class="ghost" id="signUp">Click here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xyz">
+    <div class="venn-container">
+    
+                            <div class="venncirctop">
+                            <a class="venntxttop" >Studies and Curriculum</a>
+                            </div>
+                            <div class="venncirclft">
+                            <a class="venntxtlft" >Easy to Use</a>
+                            </div>
+                            <div class="venncircrt">
+                            <a class="venntxtrt" >Digital Learning</a>
+                      </div>
+                            <div class="venncircbtm">
+                            <a class="venntxtbtm" href="#">Online Book Issue System</a>
+                                </div>
+                    </div>
+        </div>
+        <script src="rega.js"></script>
+    
+      </body>
+    </html>
+
+    

@@ -1,0 +1,199 @@
+ 
+<html>    
+    <head>  
+    <title>
+      Feedback Form
+    </title>
+        <link rel="stylesheet"  href="./stylesheets/feedback.css">
+        <script src="./javascripts/feedback.js"></script>
+    </head>    
+    <body>
+     <header class="header" role="banner">
+      <h1 class="logo">
+        <a href="#">Departmental<span>
+         Digital Inventory</span></a>
+      </h1>
+      <div class="nav-wrap">
+        <nav class="main-nav" role="navigation">
+          <ul class="unstyled list-hover-slide">
+            <li><a href="std_das.html" >Home</a></li>
+        <li><a href="std_bookse.html">Book Search</a></li>
+        <li><a href="fine.html">Calculate Fine</a></li>
+        <li><a href="req.html">Request a Book</a></li>
+        <li><a href="feedback.html" class="feed">Feedback</a></li>
+        <li><a href="login.html">Logout</a>
+          </ul>
+        </nav>
+        
+      </div>
+    </header>
+     <div class="box"> 
+       
+    <h1>Feedback</h1>
+    <p class="fb"> Please fill out the feedback form to help us improve our systems</p>
+    <br><br>
+    
+    <div class="container1">    
+      <form action="feedback_admin.html" onSubmit="Val(this)" >    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="fname"  >First Name</label>    
+          </div>    
+          <div class="col-75">  
+            <input type="text" id="fname"  placeholder="Your first name.." name="fname" 
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="lname">Last Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="lname" placeholder="Your last name.." name="lname"
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>     
+        <div class="row">    
+            <div class="col-25">    
+              <label for="email">Email Id</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="email" id="email" placeholder="Your email id.." name="email"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>   
+          <br> 
+        <div class="row">    
+          <div class="col-25">    
+            <label for="abooks">How would you rate our webpage?</label>    
+          </div>    
+          <div class="col-75">    
+            <label class="cont">1
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">2
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">3
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">4
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">5
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">6
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+     <label class="cont">7
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">8
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">9
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">10
+      <input type="radio" name="radio" required>
+      <span class="checkmark"></span>
+    </label>
+          </div>    
+        </div>  
+      
+        <br>
+        <br>
+      
+        <div class="row1">    
+          <div class="col-25">    
+            <label for="abooks">Availability of books</label>    
+          </div>    
+          <div class="col1-75">    
+            <label class="cont1">Excellent
+      <input type="radio" name="radio1" required>
+      <span class="checkmark1"></span>
+    </label>
+    <label class="cont1">Very Good
+      <input type="radio" name="radio1" required>
+      <span class="checkmark1"></span>
+    </label>
+    <label class="cont1">Good
+      <input type="radio" name="radio1" required>
+      <span class="checkmark1"></span>
+    </label>
+    <label class="cont1">Fair
+      <input type="radio" name="radio1" required>
+      <span class="checkmark1"></span>
+    </label>
+    <label class="cont1">Very Bad
+      <input type="radio" name="radio1" required>
+      <span class="checkmark1"></span>
+    </label>
+          </div>    
+        </div>   
+      
+        <br> 
+      
+         <div class="row2">    
+          <div class="col-25">    
+            <label for="abooks">Ease of access</label>    
+          </div>    
+          <div class="col-75">    
+            <label class="cont">Excellent
+      <input type="radio" name="radio2" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">Very Good
+      <input type="radio" name="radio2" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">Good
+      <input type="radio" name="radio2" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">Fair
+      <input type="radio" name="radio2" required>
+      <span class="checkmark"></span>
+    </label>
+    <label class="cont">Very Bad
+      <input type="radio" name="radio2" required>
+      <span class="checkmark"></span>
+    </label>
+          </div>    
+        </div>   
+      
+            
+        <div class="row2">    
+          <div class="col-25">   
+            
+            <label for="obooks">Comments
+                </label>    
+          </div>    
+    
+           <div class="col-75">    
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" name="obooks"
+                      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+            style="color:white; font-size: 30px;" required></textarea>    
+          </div> 
+        </div>    
+        <br><br><br>
+         <div class="row">    
+         <input style="color: white; background: transparent;border: 1px solid white;font-size: 20px;margin-right: 45%;" type="submit" value="Submit" onclick="handlesubmit()">
+        </div>    
+        
+        
+      </form>    
+    </div> 
+    <br>
+    </body>    
+    </html>    

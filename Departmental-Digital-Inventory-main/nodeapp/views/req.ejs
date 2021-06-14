@@ -1,0 +1,99 @@
+  
+<html>    
+    <head> 
+      <title>
+        Request A Book
+      </title>
+        <link rel="stylesheet"  href="req.css">
+        <script src="req.js"></script>
+    </head>    
+    <body>
+      
+     <header class="header" role="banner">
+      <h1 class="logo">
+        <a href="#">Departmental<span>
+         Digital Inventory</span></a>
+      </h1>
+      <div class="nav-wrap">
+        <nav class="main-nav" role="navigation">
+          <ul class="unstyled list-hover-slide">
+            <li><a href="std_das.html" >Home</a></li>
+        <li><a href="std_bookse.html">Book Search</a></li>
+        <li><a href="fine.html">Calculate Fine</a></li>
+        <li><a href="req.html" class="req">Request a Book</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Logout</a>
+          </ul>
+        </nav>
+        
+      </div>
+    </header>
+     <div class="box">   
+    <h1>Request a Book</h1>
+    <p class="fb"> Please fill out the form to suggest new books for the library<br><h4>Please Enter The Details Of The Book</h4> </p>
+    <br><br>
+    <div class="container1">    
+      <form action = "#" onSubmit="Val(this)">    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="name">Your Name</label>    
+          </div>    
+          <div class="col-75">  
+            <input type="text" id="name" placeholder="Your name.." name="name" 
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="email">Your Mail ID</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="email" id="email" placeholder="Your Mail ID.." name="email"
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+            <div class="col-25">    
+              <label for="bname"> Book Name</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="bname"  placeholder="Book name.." name="bname"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>   
+       
+        <div class="row">    
+            <div class="col-25">    
+              <label for="aname">Author Name</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="aname" placeholder="Author name.." name="aname"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>  
+        
+        
+          <br>    
+        <br>
+        <div class="row">    
+          <div class="col-25">    
+            <label for="des">Description
+                </label>    
+          </div>    
+          <div class="col-75">    
+            <textarea id="subject" name="subject" placeholder="About the book.." style="height:200px" name="des"
+            style="color:white; font-size: 30px;" required></textarea>    
+          </div>    
+        </div>    
+        <br><br><br>
+      <div class="wrapper">
+      <button type= "submit" class="">
+        <span>Submit</span>
+      </button>
+    </div>
+        
+      </form>    
+    </div> 
+    <br>
+    </body>    
+    </html> 
