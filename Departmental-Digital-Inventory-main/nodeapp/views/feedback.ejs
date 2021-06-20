@@ -16,12 +16,12 @@
       <div class="nav-wrap">
         <nav class="main-nav" role="navigation">
           <ul class="unstyled list-hover-slide">
-            <li><a href="std_das.html" >Home</a></li>
+            <li><a href="/std_das" >Home</a></li>
         <li><a href="std_bookse.html">Book Search</a></li>
         <li><a href="fine.html">Calculate Fine</a></li>
         <li><a href="req.html">Request a Book</a></li>
-        <li><a href="feedback.html" class="feed">Feedback</a></li>
-        <li><a href="login.html">Logout</a>
+        <li><a href="/feedback" class="feed">Feedback</a></li>
+        <li><a href="/logout">Logout</a>
           </ul>
         </nav>
         
@@ -34,13 +34,13 @@
     <br><br>
     
     <div class="container1">    
-      <form action="feedback_admin.html" onSubmit="Val(this)" >    
+      <form method="post" action="/feedback" onSubmit="Val(this)" >    
         <div class="row">    
           <div class="col-25">    
             <label for="fname"  >First Name</label>    
           </div>    
           <div class="col-75">  
-            <input type="text" id="fname"  placeholder="Your first name.." name="fname" 
+            <input type="text" id="fname"  placeholder="Your first name.." name="first_name" 
             style="color:white; font-size: 18px;" required>    
           </div>    
         </div>    
@@ -49,7 +49,7 @@
             <label for="lname">Last Name</label>    
           </div>    
           <div class="col-75">    
-            <input type="text" id="lname" placeholder="Your last name.." name="lname"
+            <input type="text" id="lname" placeholder="Your last name.." name="last_name"
             style="color:white; font-size: 18px;" required>    
           </div>    
         </div>     
@@ -58,7 +58,7 @@
               <label for="email">Email Id</label>    
             </div>    
             <div class="col-75">    
-              <input type="email" id="email" placeholder="Your email id.." name="email"
+              <input type="email" id="email" placeholder="Your email id.." name="email_address"
               style="color:white; font-size: 18px;" required>    
             </div>    
           </div>   
@@ -69,43 +69,43 @@
           </div>    
           <div class="col-75">    
             <label class="cont">1
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">2
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">3
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">4
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">5
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">6
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
      <label class="cont">7
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">8
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">9
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">10
-      <input type="radio" name="radio" required>
+      <input type="radio" name="rating" required>
       <span class="checkmark"></span>
     </label>
           </div>    
@@ -120,23 +120,23 @@
           </div>    
           <div class="col1-75">    
             <label class="cont1">Excellent
-      <input type="radio" name="radio1" required>
+      <input type="radio" name="availability" required>
       <span class="checkmark1"></span>
     </label>
     <label class="cont1">Very Good
-      <input type="radio" name="radio1" required>
+      <input type="radio" name="availability" required>
       <span class="checkmark1"></span>
     </label>
     <label class="cont1">Good
-      <input type="radio" name="radio1" required>
+      <input type="radio" name="availability" required>
       <span class="checkmark1"></span>
     </label>
     <label class="cont1">Fair
-      <input type="radio" name="radio1" required>
+      <input type="radio" name="availability" required>
       <span class="checkmark1"></span>
     </label>
     <label class="cont1">Very Bad
-      <input type="radio" name="radio1" required>
+      <input type="radio" name="availability" required>
       <span class="checkmark1"></span>
     </label>
           </div>    
@@ -150,23 +150,23 @@
           </div>    
           <div class="col-75">    
             <label class="cont">Excellent
-      <input type="radio" name="radio2" required>
+      <input type="radio" name="ease_of_access" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">Very Good
-      <input type="radio" name="radio2" required>
+      <input type="radio" name="ease_of_access" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">Good
-      <input type="radio" name="radio2" required>
+      <input type="radio" name="ease_of_access" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">Fair
-      <input type="radio" name="radio2" required>
+      <input type="radio" name="ease_of_access" required>
       <span class="checkmark"></span>
     </label>
     <label class="cont">Very Bad
-      <input type="radio" name="radio2" required>
+      <input type="radio" name="ease_of_access" required>
       <span class="checkmark"></span>
     </label>
           </div>    
@@ -181,7 +181,7 @@
           </div>    
     
            <div class="col-75">    
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" name="obooks"
+            <textarea id="subject" name="comments" placeholder="Write something.." style="height:200px" name="obooks"
                       @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
             style="color:white; font-size: 30px;" required></textarea>    
           </div> 

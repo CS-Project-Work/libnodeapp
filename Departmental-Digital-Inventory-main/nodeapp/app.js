@@ -9,6 +9,12 @@ var routes4 = require('./routes/user_dashboard-route');
 var routes5 = require('./routes/lib-login-route');
 var routes6 = require('./routes/librarian-route');
 var routes7 = require('./routes/faculty_dashboard-route');
+var routes8 = require('./routes/feedback-route');
+var routes9 = require('./routes/lib-feedback-route');
+var routes10 = require('./routes/std-req-route');
+var routes11 = require('./routes/lib-req-route');
+var routes12 = require('./routes/std-support-route');
+var routes13 = require('./routes/lib-support-route');
 
 var logger = require('morgan');
 var session = require('express-session');
@@ -40,6 +46,12 @@ app.use('/', routes4);
 app.use('/', routes5);
 app.use('/', routes6);
 app.use('/', routes7);
+app.use('/', routes8);
+app.use('/', routes9);
+app.use('/', routes10);
+app.use('/', routes11);
+app.use('/', routes12);
+app.use('/', routes13);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
