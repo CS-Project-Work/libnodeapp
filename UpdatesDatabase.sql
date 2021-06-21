@@ -31,7 +31,7 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 ('Donald D Givone','Digital Principles & Design',5,'https://images-na.ssl-images-amazon.com/images/I/51ASw27Xs5L._SX258_BO1,204,203,200_.jpg',3,'Login Design'),
 ('R D Sudhaker Samuel','Illustrative Approach to Logic Design',5,'https://images-na.ssl-images-amazon.com/images/I/41qrZHLvnWL._SY344_BO1,204,203,200_.jpg',3,'Login Design');
 
-insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
 ('Horowitz, Sahni, Anderson Freed','Fundamentals of Data Structures in C',5,'https://i.pinimg.com/236x/3d/cf/17/3dcf1741e11d7a81c524b2fc68c0a584.jpg',3,'Data Structures'),
 ('Aaron M.Tenenbaum,Yedidyah Langsam,Moshe J. Augenstein','Data Structures using C',5,'https://www.pragationline.com/wp-content/uploads/2021/03/DATA-STRUCTURES-USING-C-AND-C-YEDIDYAH-LANGSAM-MOSHE-J.-AUGENSTEIN-ARON-M.-TENENBAUM.jpg',3,'Data Structures'),
 ('Robert L. Kruse, Clovis L.Tondo, Bruce P. Leung','Data structures and program design in C',5,'https://images-na.ssl-images-amazon.com/images/I/51eyW36STrL._SX359_BO1,204,203,200_.jpg',3,'Data Structures'),
