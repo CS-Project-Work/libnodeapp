@@ -1,3 +1,33 @@
+var config = require('./api_config.json')
+base_url = `${config['API_URL']}:${config['PORT']}/`;
+
+function httpGet(route)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", base_url+route, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+function httpPost(route)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "POST", base_url+route, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
+function httpPut(route)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "PUT", base_url+route, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+
 function inc(formatted_subject_name, i){
     var stock =  parseInt(document.getElementById(formatted_subject_name+"_stock_"+i).innerHTML);
     var final_ans = (stock+1).toString();
@@ -35,7 +65,7 @@ function format_subject_name(subject_name){
 }
 
 
-function generate_tables(num, subject_name, data){
+function generate_tables(subject_name, data){
   var table = document.createElement('table');
   var headers = ['Book Title', 'Author', 'Stocks left', 'Add stocks', 'Delete stocks'];
   var header_objs = generate_headers(headers);
@@ -44,7 +74,7 @@ function generate_tables(num, subject_name, data){
     header_row.append(header_obj);
   }
   table.append(header_row);
-  for(i=0;i<num;i++){
+  for(i=0;i<data.length;i++){
     var table_row = document.createElement('tr');
     var formatted_subject_name = format_subject_name(subject_name);
     table_row.id = formatted_subject_name + "_" + i.toString();
@@ -77,6 +107,7 @@ function generate_tables(num, subject_name, data){
     del_stocks_button.onclick = dec(formatted_subject_name, i);
     del_stocks_entry.append(del_stocks_button);
     table_row.append(del_stocks_entry);
+
     table.append(table_row);
   }
 }
