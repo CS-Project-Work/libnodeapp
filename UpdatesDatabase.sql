@@ -212,25 +212,25 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 
 /* STUDENT */
 
-create table student(usn varchar(10),sname varchar(20),email varchar(20),semester int,nummber_of_books_issued int,
+create table student(usn varchar(10),sname varchar(20),email varchar(20),semester int,number_of_books_issued int,
 primary key (usn));
 
 create table stucredentials(usn varchar(10),password varchar(20),
 foreign key (usn) references student(usn) on delete cascade on update cascade);
 
-create table stubookissued(usn varchar(20),bookid  varchar(20),
+create table stubookissued(usn varchar(20),bookid  int,
 foreign  key (usn) references student(usn) on update cascade on delete cascade,
 foreign key (bookid) references stocks(bookid) on update cascade on delete cascade);
 
 /* FACULTY */
 
-create table faculty(ftyid int,fname varchar(20),email varchar(20),nummber_of_books_issued int,
+create table faculty(ftyid int,fname varchar(20),email varchar(20),number_of_books_issued int,
 primary key(ftyid));
 
 create table ftycredentials(ftyid varchar(10),password varchar(20),
 foreign key (ftyid) references student(usn) on delete cascade on update cascade);
 
-create table ftybookissued(ftyid int,bookid  varchar(20),
+create table ftybookissued(ftyid int,bookid  int,
 foreign  key (ftyid) references faculty(ftyid) on update cascade on delete cascade,
 foreign key (bookid) references stocks(bookid) on update cascade on delete cascade);
 
