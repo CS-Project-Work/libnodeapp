@@ -1,7 +1,7 @@
 create database projectwork;
 use  projectwork;
 show databases;
-drop table stocks;
+
 
 /* LIBARIAN */
 
