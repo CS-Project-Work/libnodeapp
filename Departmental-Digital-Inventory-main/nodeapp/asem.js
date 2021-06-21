@@ -1,12 +1,11 @@
-var config = require('./api_config.json')
-base_url = `${config['API_URL']}:${config['PORT']}/`;
+var base_url = `http://127.0.0.1:5000/`;
 
 function httpGet(route)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", base_url+route, false ); // false for synchronous request
     xmlHttp.send( null );
-    return xmlHttp.responseText;
+    return JSON.parse(xmlHttp.responseText);
 }
 
 
@@ -15,7 +14,7 @@ function httpPost(route)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "POST", base_url+route, false ); // false for synchronous request
     xmlHttp.send( null );
-    return xmlHttp.responseText;
+    return JSON.parse(xmlHttp.responseText);
 }
 
 
@@ -24,7 +23,7 @@ function httpPut(route)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "PUT", base_url+route, false ); // false for synchronous request
     xmlHttp.send( null );
-    return xmlHttp.responseText;
+    return JSON.parse(xmlHttp.responseText);
 }
 
 
