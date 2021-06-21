@@ -31,13 +31,13 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 ('Donald D Givone','Digital Principles & Design',5,'https://images-na.ssl-images-amazon.com/images/I/51ASw27Xs5L._SX258_BO1,204,203,200_.jpg',3,'Login Design'),
 ('R D Sudhaker Samuel','Illustrative Approach to Logic Design',5,'https://images-na.ssl-images-amazon.com/images/I/41qrZHLvnWL._SY344_BO1,204,203,200_.jpg',3,'Login Design');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
-('Fundamentals of Data Structures in C','Fundamentals of Data Structures in C',5,'https://i.pinimg.com/236x/3d/cf/17/3dcf1741e11d7a81c524b2fc68c0a584.jpg',3,'Data Structures'),
-('Data Structures using C','Data Structures using C',5,'https://www.pragationline.com/wp-content/uploads/2021/03/DATA-STRUCTURES-USING-C-AND-C-YEDIDYAH-LANGSAM-MOSHE-J.-AUGENSTEIN-ARON-M.-TENENBAUM.jpg',3,'Data Structures'),
-('Data structures and program design in C','Data structures and program design in C',5,'https://images-na.ssl-images-amazon.com/images/I/51eyW36STrL._SX359_BO1,204,203,200_.jpg',3,'Data Structures'),
-('Data Structure using C','Data Structure using C',5,'https://drive.google.com/file/d/1HlqFcQ09xYwvakucqodeN1liXUUDmS9b/view',3,'Data Structures');
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
+('Horowitz, Sahni, Anderson Freed','Fundamentals of Data Structures in C',5,'https://i.pinimg.com/236x/3d/cf/17/3dcf1741e11d7a81c524b2fc68c0a584.jpg',3,'Data Structures'),
+('Aaron M.Tenenbaum,Yedidyah Langsam,Moshe J. Augenstein','Data Structures using C',5,'https://www.pragationline.com/wp-content/uploads/2021/03/DATA-STRUCTURES-USING-C-AND-C-YEDIDYAH-LANGSAM-MOSHE-J.-AUGENSTEIN-ARON-M.-TENENBAUM.jpg',3,'Data Structures'),
+('Robert L. Kruse, Clovis L.Tondo, Bruce P. Leung','Data structures and program design in C',5,'https://images-na.ssl-images-amazon.com/images/I/51eyW36STrL._SX359_BO1,204,203,200_.jpg',3,'Data Structures'),
+('A.M Padma Reddy','Data Structure using C',5,'https://drive.google.com/file/d/1HlqFcQ09xYwvakucqodeN1liXUUDmS9b/view',3,'Data Structures');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Advanced Microprocessor and peripherals','A K Ray and K M Bhurchandi.',5,'https://booksbeka.com/image/cache/catalog/ANI/download-550x550h.jpg',3,'Microprocessors and Microcontrollers'),
 ('The 8051 Microcontroller Architecture, Programming & Applications','Kenneth J. Ayala',5,'https://images-na.ssl-images-amazon.com/images/I/51MK9WDSHFL._SX258_BO1,204,203,200_.jpg',3,'Microprocessors and Microcontrollers'),
 ('8051 Microcontroller and Embedded Systems- using Assembly and C','Mohammed Ali mazidi , Janice Gillispie mazidi and rolim d mcKinley',5,'https://easyengineering.net/wp-content/uploads/2018/03/81ppQwnjK5L.jpg',3,'Microprocessors and Microcontrollers'),
@@ -51,37 +51,37 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 
 /* 4th sem */
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Linear Algebra and its applications','David C. lay, Steven R. lay, Judi J Mc. Donald',5,'https://images-na.ssl-images-amazon.com/images/I/51xecyCjTKL._SX258_BO1,204,203,200_.jpg',4,'Linear Algebra'),
 ('Linear Algebra and its applications','Gilbert Strang',5,'https://images-na.ssl-images-amazon.com/images/I/511MUkxPscL.jpg',4,'Linear Algebra'),
 ('Schaum’s outline series-Theory and problems of linear algebra','Seymour Lipschutz',5,'https://images-na.ssl-images-amazon.com/images/I/51uLJZuctuL.jpg',4,'Linear Algebra'),
 ('Linear Algebra an Introduction','Richard Bronson & Gabriel B. Costa',5,'https://images-eu.ssl-images-amazon.com/images/I/51TTG1OGH6L._SY264_BO1,204,203,200_QL40_ML2_.jpg',4,'Linear Algebra');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Introduction to Automata Theory, Languages and Computation','John E. Hop croft,Rajeev Motwani,Jeffrey D.Ullman:education',5,'https://m.media-amazon.com/images/I/41x21T8bSBL.jpg',4,'Theoretical Foundations of Computations'),
 ('Itroduction to Languages and Automata Theory','John C Martin',5,'(https://www.mheducation.co.in/media/catalog/product/cache/84c63a40cf0771f03c9446b22a7e0f08/9/7/9780070660489_37.jpeg',4,'Theoretical Foundations of Computations'),
 ('An Introduction to formal Languages and Automata','Peter Linz',5,'https://images-na.ssl-images-amazon.com/images/I/616UEKjXzPL._SX407_BO1,204,203,200_.jpg',4,'Theoretical Foundations of Computations'),
 ('Introduction to Computer Theory','Daniel I.A. Cohen',5,'https://media.wiley.com/product_data/coverImage300/23/04711377/0471137723.jpg',4,'Theoretical Foundations of Computations');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Fundamental of Database Systems','Ramez Elmasri and Shamkant B Navathe ',5,'https://m.media-amazon.com/images/I/515RW73YtIL._SX260_.jpg',4,'Database Management Systems'),
 ('Database Management Systems','Ramakrishnan and Gehrke',5,'https://images-na.ssl-images-amazon.com/images/I/41QGbYii3OL.jpg',4,'Database Management Systems'),
 ('An Introduction to Database Systems','C.J.Date, A.Kannan,S.Swamynathan',5,'https://images-na.ssl-images-amazon.com/images/I/5173G0M4QXL._AC_UL600_SR486,600_.jpg',4,'Database Management Systems'),
 ('Database Systems:The Complete Book','Hector GarciaMolina,Jeffrey D.Ullman,Jennifer Widom ',5,'https://images-na.ssl-images-amazon.com/images/I/51c7hudZfHL._SX378_BO1,204,203,200_.jpg',4,'Database Management Systems');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Introduction to the Design and Analysis of Algorithms','Anany Levitin',5,'https://images-na.ssl-images-amazon.com/images/I/615MSAW2RXL._SX258_BO1,204,203,200_.jpg',4,'Analysis and Design of Algorithms'),
 ('Introduction to Algorithms','Thomas H Cormen ,Charles E Leiserson,Ronald L Rivest, Clifford Stein',5,'https://images-na.ssl-images-amazon.com/images/I/41T0iBxY8FL._SX440_BO1,204,203,200_.jpg',4,'Analysis and Design of Algorithms'),
 ('Fundamentals of Computer Algorithms','Ellis Horowitz, SatrajSahni and Rajasekharam',5,'https://drive.google.com/file/d/1f9pelukDzdJvKHdpN1fa5ILYKsG7sUJE/view',4,'Analysis and Design of Algorithms'),
 ('Analysis and design of Algorithms','Padma Reddy',5,'https://drive.google.com/file/d/1KqPR-mYAikFBwXB-7aFrq-VESuiHJ_5n/view',4,'Analysis and Design of Algorithms');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('Operating System Concepts','Abraham Silberschatz,Peter Baer Galvin and Greg Gagne',5,'https://media.wiley.com/product_data/coverImage300/55/11180937/1118093755.jpg',4,'Operating Systems'),
 ('Modern Operating System3','Andrew S.Tanenbaum',5,'https://drive.google.com/file/d/12dneeQrEJ9vmvjghDkuO-0u5-agkJieh/view',4,'Operating Systems'),
 ('Operating System: Internals and Design Principles','William Stallings',5,'https://drive.google.com/file/d/1IN4DczATRTBZpqPOWS0kLhIomRRNQHEA/view',4,'Operating Systems'),
 ('Schaums Outline of Operating Systems','J. Archer Harris',5,'https://drive.google.com/file/d/1xPyB9jNGVQInT9w8XMNrVpyhatxBDu_A/view',4,'Operating Systems');
 
-insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values  
+insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values  
 ('An Introduction to Constitution of India and Professional Ethics','Merunandan K.B. and B.R.Venkatesh',5,'https://images-na.ssl-images-amazon.com/images/I/51gJppe8xrL._SX326_BO1,204,203,200_.jpg',4,'Constitution of India, Professional Ethics and Human Rights'),
 ('Constitution of India &Professional Ethics& Human Rights','Phaneesh K. R., Sudha Publication',5,'https://www.cengage.co.in/Book_images_tn/9789386668479_tn.jpg',4,'Constitution of India, Professional Ethics and Human Rights'),
 ('V.N. Shukla s Constitution of India','Mahendra Pal Singh',5,'https://drive.google.com/file/d/1szmXFT2UyEttA1gcrO3gjpa-qUDdSh0y/view',4,'Constitution of India, Professional Ethics and Human Rights'),
