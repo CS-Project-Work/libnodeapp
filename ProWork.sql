@@ -1,7 +1,6 @@
 create database projectwork;
 use  projectwork;
 show databases;
-drop table stocks;
 
 /* LIBARIAN */
 
@@ -9,7 +8,6 @@ create table libarian (lname varchar(20),email varchar(20),password varchar(20))
 
 create table stocks(bookid varchar(500),author varchar(500),bookname varchar(500),numberofstocks int,book_img varchar(1000),semester int,subject_name varchar(200),
 primary key (bookid));
-drop table stocks;
 select * from stocks;
 /* 3rd sem */
 
