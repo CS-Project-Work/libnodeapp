@@ -25,17 +25,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');;
-var reqbookRouter = require('./routes/reqbook');;
-var feedbackRouter = require('./routes/feedback');;
+
 var facRouter = require('./routes/fac');;
-var supportRouter = require('./routes/support');;
+
 var app = express();
 // view engine setup
-app.use('/feedback', feedbackRouter);
+
 app.use('/', indexRouter);
-app.use('/reqbook', reqbookRouter);
+
 app.use('/fac', facRouter);
-app.use('/support', supportRouter);
+
 app.use('/users', usersRouter);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -63,9 +62,7 @@ app.use(function(err, req, res, next) {
 var logger = require('morgan');
 var session = require('express-session');
 var facRouter = require('./routes/fac');
-var reqbookRouter = require('./routes/reqbook');
-var feedbackRouter = require('./routes/feedback');
-var supportRouter = require('./routes/support');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
@@ -85,9 +82,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/fac', facRouter);
-app.use('/feedback', feedbackRouter);
-app.use('/support', supportRouter);
-app.use('/reqbook', reqbookRouter);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', routes1);
