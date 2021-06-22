@@ -15,19 +15,64 @@ var routes10 = require('./routes/std-req-route');
 var routes11 = require('./routes/lib-req-route');
 var routes12 = require('./routes/std-support-route');
 var routes13 = require('./routes/lib-support-route');
+var routes16 = require('./routes/faculty_dashboard-route');
+
+
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');;
+
+var facRouter = require('./routes/fac');;
+
+var app = express();
+// view engine setup
+
+app.use('/', indexRouter);
+
+app.use('/fac', facRouter);
+
+app.use('/users', usersRouter);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
+// error handler
+app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+});
+
+
 
 var logger = require('morgan');
 var session = require('express-session');
+var facRouter = require('./routes/fac');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
-app.use(session({ 
-  secret: '123456cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 }
-}))
-// view engine setup
+app.use(session({
+        secret: '123456cat',
+        resave: false,
+        saveUninitialized: true,
+        cookie: { maxAge: 60000 }
+    }))
+    // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -36,6 +81,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/fac', facRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -55,26 +101,26 @@ app.use('/', routes13);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 app.get('/feedback', function(req, res) {
-  res.render('feedback', { });
+    res.render('feedback', {});
 });
 
 app.get('/std_das', function(req, res) {
-  res.render('std_das', { });
+    res.render('std_das', {});
 });
 
 var registrationRouter = require('./routes/registration_route');
@@ -88,4 +134,3 @@ app.use('/', dashboardRouter);
 app.use('/', logoutRouter);
 
 module.exports = app;
-
