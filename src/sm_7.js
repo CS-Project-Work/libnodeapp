@@ -121,7 +121,7 @@ function generate_tables(subject_name, data){
 }
 
 function do_it(){
-  var sem = 3;
+  var sem = 7;
   var subjects = httpGet("subjects?sem="+sem);
   for(j=0;j<subjects['data'].length;j++){
     var data = httpGet("books?sem="+sem+"&subject_name="+subjects['data'][j]);
