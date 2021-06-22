@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Stock Manager</title>
+  <link rel="stylesheet"  href="/stylesheets/sm.css">
+  <meta id="sem" content="<%= sems %>"/>
+</head>
+  <body>
+<header class="header" role="banner">
+  <h1 class="logo">
+    <a href="#">Departmental<span>
+     Digital Inventory</span></a>
+  </h1>
+  <div class="nav-wrap">
+    <nav class="main-nav" role="navigation">
+      <ul class="unstyled list-hover-slide">
+        <li><a href="admin_das.html" >Home</a></li>
+            <li><a href="admin_bookse.html">Book Search</a></li>
+
+            <li><a href="mang.html"class="manager">Stock Manager</a></li>
+
+            <li><a href="login.html">Logout</a> </li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+    <h1>Stock Manager for Semester : <%= sems %> </h1><br>
+    <div id="wrapper">
+
+    </div>
+  <script src="/javascripts/sm.js"></script>
+  </body>
+</html>

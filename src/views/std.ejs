@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet"  href="/stylesheets/std.css">
+    <meta id="sem" content=" <%= sems %> "/>
+    <title>
+        Book Search
+    </title>
+</head>
+<body>
+
+<header class="header" role="banner">
+    <h1 class="logo">
+      <a href="#">Departmental<span>
+       Digital Inventory</span></a>
+    </h1>
+    <div class="nav-wrap">
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+            <li><a href="std_das.html" >Home</a></li>
+            <li><a href="std_bookse.html" class="search">Book Search</a></li>
+            <li><a href="fine.html">Calculate Fine</a></li>
+            <li><a href="req.html">Request a Book</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="login.html">Logout</a>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  
+  <br><h1>Search books for Semester <%= sems %><br>
+    <h1>Number of books issued: </h1><h1 id="count_val">0</h1>
+    <div id="wrapper">
+
+    </div>
+    <script src="/javascripts/std.js"></script>
+</body>
+</html>
