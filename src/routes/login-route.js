@@ -9,7 +9,7 @@ router.get('/login', function(req, res, next) {
 router.post('/login', function(req, res){
     var emailAddress = req.body.email_address;
     var password = req.body.password;
-    var sql='SELECT * FROM stud_registration WHERE email_address =? AND password =?';
+    var sql='SELECT * FROM student WHERE email_address =? AND password =?';
     db.query(sql, [emailAddress, password], function (err, data, fields) {
         if(err) throw err
         if(data.length>0){
@@ -29,7 +29,7 @@ router.get('/login1', function(req, res, next) {
   router.post('/login1', function(req, res){
       var emailAddress = req.body.email_address;
       var password = req.body.password;
-      var sql='SELECT * FROM teacher_registration WHERE email_address =? AND password =?';
+      var sql='SELECT * FROM faculty WHERE email_address =? AND password =?';
       db.query(sql, [emailAddress, password], function (err, data, fields) {
           if(err) throw err
           if(data.length>0){

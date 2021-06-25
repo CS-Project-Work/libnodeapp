@@ -1,0 +1,46 @@
+<html>
+  <head>
+      
+<link rel="stylesheet"  href="./stylesheets/fine.css">
+<script src="fine.js"></script>
+    
+    <title>Fine Calculator</title>
+  </head>
+  <body>
+<header class="header" role="banner">
+  <h1 class="logo">
+    <a href="#">Departmental<span>
+     Digital Inventory</span></a>
+  </h1>
+  <div class="nav-wrap">
+    <nav class="main-nav" role="navigation">
+      <ul class="unstyled list-hover-slide">
+        <li><a href="/faculty_das" >Home</a></li>
+        <li><a href="/fty-profile"">Profile</a></li>
+        <li><a href="/fty-search-panel">Book Search</a></li>
+        <li><a href="/fty-books-issued">Books issued</a></li>
+        <li><a href="/fty-fine-cal"class="dash" >Calculate Fine</a></li>
+        <li><a href="/fty-req-route">Request a Book</a></li>
+        <li><a href="/fty-feedback-route">Feedback</a></li>
+        <li><a href="/logout">Logout</a>
+      </ul>
+    </nav>
+    
+  </div>
+</header>
+   <h1> <br>Library Fines <br></h1>
+<h3>The Departmental Library assesses a fine to the record of any student who fails to return library materials on or before their due date. Accumulated fines shall result in the suspension of borrowing privileges.
+    The fine is calculated depending on the number of days taken to return the books after the due dates. Fine rate: Rs 10/- per book per day. <br> <br><br></h3>
+    
+    <form class="form" onSubmit="validation(this);">
+  <h2>Fine Calculator</h2>
+  <p type="Enter the numbers of days delayed (book 1)"><input color="white" name = "name1" placeholder="0"></p>
+ <p type="Enter the numbers of days delayed (book 2)"><input name = "name2" placeholder="0"></p>
+ <p type="Enter the numbers of days delayed (book 3)"><input name = "name3" placeholder="0"></p>
+  
+  <button type="submit">Calculate</button>
+  <div>
+  </div>
+</form>
+  </body>
+  </html>

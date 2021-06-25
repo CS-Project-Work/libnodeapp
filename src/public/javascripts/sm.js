@@ -64,7 +64,7 @@ function generate_tables(subject_name, data){
   wrapper.append(breaker1);
   var table = document.createElement('table');
   table.className = 'rwd-table';
-  var headers = ['Book Title', 'Author', 'Stocks left', 'Add stocks', 'Delete stocks'];
+  var headers = ['Book ID', 'Book Title', 'Author', 'Stocks left', 'Add stocks', 'Delete stocks'];
   var header_row = document.createElement('tr');
   for(t=0;t<headers.length;t++){
     var header_obj = document.createElement('th');
@@ -76,6 +76,11 @@ function generate_tables(subject_name, data){
     var table_row = document.createElement('tr');
     var formatted_subject_name = format_subject_name(subject_name);
     table_row.id = formatted_subject_name + "_" + i.toString();
+
+    var id_entry = document.createElement('td');
+    id_entry.setAttribute("data-th",'Book ID');
+    id_entry.innerHTML = data[i]['bookid'];
+    table_row.append(id_entry);
 
     var title_entry = document.createElement('td');
     title_entry.setAttribute("data-th",'Book Title');

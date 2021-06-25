@@ -7,6 +7,9 @@ router.get('/std-support-route', function(req, res, next) {
   res.render('std-contact');
 });
 
+router.get('/fty-support-route', function(req, res, next) {
+  res.render('faculty-contact');
+});
 router.post('/support', function(req, res, next) {
     
   inputData ={

@@ -1,0 +1,131 @@
+  
+<html>    
+    <head> 
+      <title>
+        Request A Book
+      </title>
+        <link rel="stylesheet"  href="./stylesheets/req.css">
+        <script src="./javascripts/req.js"></script>
+    </head>    
+    <body>
+      
+     <header class="header" role="banner">
+      <h1 class="logo">
+        <a href="#">Departmental<span>
+         Digital Inventory</span></a>
+      </h1>
+      <div class="nav-wrap">
+        <nav class="main-nav" role="navigation">
+          <ul class="unstyled list-hover-slide">
+            <header class="header" role="banner">
+              <h2 class="logo">
+                <a href="#">Departmental<span>
+                 Digital Inventory</span></a>
+              </h2>
+              <div class="nav-wrap">
+                <nav class="main-nav" role="navigation">
+                  <ul class="unstyled list-hover-slide">
+                    <li><a href="/faculty_das" class="dash" >Home</a></li>
+                <li><a href="/fty-profile" >Profile</a></li>
+                <li><a href="/fty-search-panel">Book Search</a></li>
+                <li><a href="/fty-books-issued">Books issued</a></li>
+                <li><a href="/fty-fine-cal">Calculate Fine</a></li>
+                <li><a href="/fty-req-route">Request a Book</a></li>
+                <li><a href="/fty-feedback-route">Feedback</a></li>
+                <li><a href="/logout">Logout</a>
+                  </ul>
+                </nav>
+                
+              </div>
+            </header>
+          </ul>
+        </nav>
+        
+      </div>
+    </header>
+     <div class="box">   
+    <h1>Request a Book</h1>
+    <p class="fb"> Please fill out the form to suggest new books for the library<br><h4>Please Enter The Details Of The Book</h4> </p>
+    <br><br>
+    <div class="container1">    
+      <form method = "post" action = "/request" onSubmit="Val(this)">    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="name">Your Name</label>    
+          </div>    
+          <div class="col-75">  
+            <input type="text" id="name" placeholder="Your name.." name="name" 
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="email">Your Mail ID</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="email" id="email" placeholder="Your Mail ID.." name="email_address"
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+            <div class="col-25">    
+              <label for="bname"> Book Name</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="bname"  placeholder="Book name.." name="book_name"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>   
+       
+        <div class="row">    
+            <div class="col-25">    
+              <label for="aname">Author Name</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="aname" placeholder="Author name.." name="author_name"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>  
+          <div class="row">    
+            <div class="col-25">    
+              <label for="aname">Semester</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="aname" placeholder="Semester.." name="semester"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>  
+          <div class="row">    
+            <div class="col-25">    
+              <label for="aname">Subject</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="aname" placeholder="Subject.." name="subject"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div> 
+        
+          <br>    
+        <br>
+        <div class="row">    
+          <div class="col-25">    
+            <label for="des">Description
+                </label>    
+          </div>    
+          <div class="col-75">    
+            <textarea id="subject" name="description" placeholder="About the book.." style="height:200px" name="description"
+            style="color:white; font-size: 30px;" required></textarea>    
+          </div>    
+        </div>    
+        <br><br><br>
+      <div class="wrapper">
+      <button type= "submit" class="">
+        <span>Submit</span>
+      </button>
+    </div>
+        
+      </form>    
+    </div> 
+    <br>
+    </body>    
+    </html> 

@@ -19,7 +19,7 @@ router.post('/register', function(req, res, next) {
         confirm_password: req.body.confirm_password
     }
 // check unique email address
-var sql='SELECT * FROM stud_registration WHERE email_address =?';
+var sql='SELECT * FROM student WHERE email_address =?';
 db.query(sql, [inputData.email_address] ,function (err, data, fields) {
  if(err) throw err
  if(data.length>1){
@@ -31,7 +31,7 @@ db.query(sql, [inputData.email_address] ,function (err, data, fields) {
  }
  else{
     // save users data into database
-    var sql = 'INSERT INTO stud_registration VALUES (?,?,?,?,?)';
+    var sql = 'INSERT INTO student VALUES (?,?,?,?,?)';
     var values = [req.body.first_name, req.body.last_name, req.body.usn,req.body.email_address,req.body.password];
    db.query(sql, values, function (err, data) {
       if (err) throw err;
@@ -43,11 +43,6 @@ db.query(sql, [inputData.email_address] ,function (err, data, fields) {
 })
  
 });
-
-
-router.get('/register1', function(req, res, next) {
-    res.render('registration-form');
-  });
   
   // to store user input detail on post request
   router.post('/register1', function(req, res, next) {
@@ -60,7 +55,7 @@ router.get('/register1', function(req, res, next) {
           confirm_password: req.body.confirm_password
       }
   // check unique email address
-  var sql='SELECT * FROM teacher_registration WHERE email_address =?';
+  var sql='SELECT * FROM faculty WHERE email_address =?';
   db.query(sql, [inputData.email_address] ,function (err, data, fields) {
    if(err) throw err
    if(data.length>1){
@@ -72,8 +67,9 @@ router.get('/register1', function(req, res, next) {
    }
    else{
       // save users data into database
-      var sql = 'INSERT INTO teacher_registration VALUES (?,?,?,?)';
+      var sql = 'INSERT INTO faculty(first_name,last_name,email_address,password) VALUES (?,?,?,?)';
       var values = [req.body.first_name, req.body.last_name,req.body.email_address,req.body.password];
+  
      db.query(sql, values, function (err, data) {
         if (err) throw err;
              });

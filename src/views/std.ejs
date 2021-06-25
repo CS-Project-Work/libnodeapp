@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet"  href="/stylesheets/std.css">
     <meta id="sem" content=" <%= sems %> "/>
+    <meta id="primary_key"  content = "<%= item[0].usn %>"/>
     <title>
         Book Search
     </title>
@@ -16,18 +17,33 @@
     <div class="nav-wrap">
       <nav class="main-nav" role="navigation">
         <ul class="unstyled list-hover-slide">
-            <li><a href="std_das.html" >Home</a></li>
-            <li><a href="std_bookse.html" class="search">Book Search</a></li>
-            <li><a href="fine.html">Calculate Fine</a></li>
-            <li><a href="req.html">Request a Book</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="login.html">Logout</a>
+          <header class="header" role="banner">
+            <h2 class="logo">
+              <a href="#">Departmental<span>
+               Digital Inventory</span></a>
+            </h2>
+            <div class="nav-wrap">
+              <nav class="main-nav" role="navigation">
+                <ul class="unstyled list-hover-slide">
+                    <li><a href="/std_das">Home</a></li>
+                    <li><a href="/std-profile">Profile</a></li>
+                    <li><a href="/std-search-panel" class="dash">Book Search</a></li>
+                    <li><a href="/std-books-issued">Books issued</a></li>
+                    <li><a href="/fine-cal">Calculate Fine</a></li>
+                    <li><a href="/std-req-route">Request a Book</a></li>
+                    <li><a href="/std-feedback-route">Feedback</a></li>
+                    <li><a href="/logout">Logout</a>
+                </ul>
+              </nav>
+              
+            </div>
+          </header>
         </ul>
       </nav>
 
     </div>
   </header>
-  
+     
   <br><h1>Search books for Semester <%= sems %><br>
     <h1>Number of books issued: </h1><h1 id="count_val">0</h1>
     <div id="wrapper">

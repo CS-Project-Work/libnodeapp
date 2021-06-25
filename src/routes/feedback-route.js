@@ -4,9 +4,13 @@ var db=require('../database');
 var alert = require('alert');  
 
 router.get('/feedback', function(req, res, next) {
-  res.render('feedback');
+  res.render('std-feedback');
 });
 
+router.get('/fty-feedback-route', function(req, res, next) {
+    res.render('faculty-feedback');
+  });
+  
 // to store user input detail on post request
 router.post('/feedback', function(req, res, next) {
     

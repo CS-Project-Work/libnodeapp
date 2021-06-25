@@ -116,7 +116,7 @@ background: #444147;
     border-right: 5px solid white;
     padding: 15px 30px 15px 20px;
 }
-.
+
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
 
 :root {
@@ -322,6 +322,7 @@ h2{
         text-align:center;
 
 }
+
 body {
   margin: 0;
   background: linear-gradient(45deg,#49a09d,#5f2c82);
@@ -339,8 +340,7 @@ table {
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  margin-left: 200px;
-  margin-top: -300px;
+
 }
 th,
 td {

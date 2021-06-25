@@ -1,0 +1,63 @@
+<html>
+<head>
+    <link rel="stylesheet"  href="/stylesheets/books-issued.css">
+    <meta id="sem" content=" <%= sems %> "/>
+    <title>
+        Book Search
+    </title>
+</head>
+<body>
+
+<header class="header" role="banner">
+    <h1 class="logo">
+      <a href="#">Departmental<span>
+       Digital Inventory</span></a>
+    </h1>
+    <div class="nav-wrap">
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+            <li><a href="/std_das" >Home</a></li>
+            <li><a href="/std-profile">Profile</a></li>
+            <li><a href="/std-search-panel">Book Search</a></li>
+            <li><a href="/std-books-issued" class="dash">Books issued</a></li>
+            <li><a href="/fine-cal">Calculate Fine</a></li>
+            <li><a href="/std-req-route">Request a Book</a></li>
+            <li><a href="/std-feedback-route">Feedback</a></li>
+            <li><a href="/logout">Logout</a>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <%if(item1.length!=0){
+    var i=1;
+     item1.forEach(function(data){   
+      %>
+  <table>
+    <p> You have issued the following books: </p>
+    <thead><tr>
+      <th>S.No </th>
+      <th>Book ID</th>
+      <th>Book Name</th>
+      <th>Semester</th>
+      <th>Subject</th>
+    </tr> </thead>
+      <tr>
+      <td><%=i; %></td>
+      <td><%=data.bookid %></td>
+      <td><%=data.bookname %></td>
+      <td><%=data.semester %></td>
+      <td><%=data.subject_name %></td>
+      </tr>
+      <%  i++; }) %>
+      <% } else{ %>
+        <tr>
+            <td colspan="7">No Data Found</td>
+        </tr>
+    <% } %>
+      </table>
+
+    </div>
+ 
+</body>
+</html>

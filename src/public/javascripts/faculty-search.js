@@ -31,7 +31,7 @@ function Cancel(num){
   var togbutton = document.getElementsByClassName("btn");
 
   if(togbutton[num].innerHTML === "Issue") {
-    togbutton[num].innerHTML = "Return";
+    togbutton[num].innerHTML = "Cancel";
   }
   else
     {
@@ -41,23 +41,19 @@ function Cancel(num){
 }
 
 
-function get_count(num,book_id,student,usn){
+function get_count(num){
   var button_var = document.getElementsByClassName("btn");
   var count_var = parseInt(document.getElementById("count_val").innerHTML);
-  if(count_var<3&&button_var[num].innerHTML==="Issue"){
+  if(count_var<7&&button_var[num].innerHTML==="Issue"){
     count_var++;
     document.getElementById("count_val").innerHTML = count_var.toString();
-    var msg = httpPost(`book/issue?type=${student}&primary_key=${usn}&book_id=${book_id}`);
-    alert(msg);
   }
-  else if(button_var[num].innerHTML==="Return"&&count_var>0){
+  else if(button_var[num].innerHTML==="Cancel"&&count_var>0){
     count_var--;
     document.getElementById("count_val").innerHTML = count_var.toString();
-    var msg = httpPost(`book/return?type=${student}&primary_key=${usn}&book_id=${book_id}`);
-    alert(msg);
   }
   else{
-    alert("You have reached the maximum amount of books that are issued to a student!");
+    alert("You have reached the maximum amount of books that are issued to a faculty!");
     Cancel(num);
   }
 }
@@ -67,8 +63,6 @@ var button_num = 0;
 
 function generate(subject_name, data){
   var wrapper = document.getElementById('wrapper');
-  var element = document.querySelector('meta[id="primary_key"]');
-  var usn = element && element.getAttribute("content");
   var subject_heading = document.createElement('h1');
   subject_heading.innerHTML = subject_name;
   var line_break1 = document.createElement('br');
@@ -92,9 +86,7 @@ function generate(subject_name, data){
     issue_button.className = 'btn';
     issue_button.innerHTML = 'Issue';
     let button_num_val = button_num;
-    let book_id = data[i]['bookid'];
-    let student = 'student';
-    issue_button.onclick = function(){get_count(button_num_val,book_id,student,usn);Cancel(button_num_val);};
+    issue_button.onclick = function(){get_count(button_num_val);Cancel(button_num_val);};
     button_num += 1;
     content.append(book_title);
     content.append(book_author);

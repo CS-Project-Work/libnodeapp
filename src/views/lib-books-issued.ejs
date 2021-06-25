@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./stylesheets/lib-book-issued.css">
+
+  <title> Librarian Dashboard</title>
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <h1 class="logo">
+      <a href="#">Departmental<span>
+          Digital Inventory</span></a>
+    </h1>
+    <div class="nav-wrap">
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+          <li><a href="/admin_das" >Home</a></li>
+        <li><a href="/manager">Stock Manager</a></li>
+        <li><a href="/stud_details">Student details</a>
+        <li><a href="/faculty_details">Faculty details</a>
+        <li><a href="/books_issued" class="dash">Books issued</a>
+        <li><a href="/lib-feedback-route">Feedback responses</a>
+        <li><a href="/lib-support-route">Support queries</a>
+        <li><a href="/lib-req-route">Book requests</a>
+        <li><a href="/logout">Logout</a>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <section class="info">
+    <div class="container">
+      <table>
+
+        <thead><tr>
+          <th>S.No </th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>USN</th>
+          <th>Semester</th>
+          <th>Subject</th>
+          <th>Book ID</th>
+          <th>Book Name</th>
+        </tr> </thead>
+        
+          <%if(item.length!=0){
+            var i=1;
+             item.forEach(function(data){   
+              %>
+          <tr>
+          <td><%=i; %></td>
+          <td><%=data.first_name %></td>
+          <td><%=data.last_name %></td>
+          <td><%=data.usn %></td>
+          <td><%=data.semester %></td>
+          <td><%=data.subject_name %></td>
+          <td><%=data.bookid %></td>
+          <td><%=data.bookname %></td>
+          </tr>
+          <%  i++; }) %>
+          <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+          </table>
+          <p color = "white"> Books issued by faculties </p>
+          
+          <table>
+    
+            <thead><tr>
+              <th>S.No </th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Faculty ID</th>
+              <th>Semester</th>
+              <th>Subject</th>
+              <th>Book ID</th>
+              <th>Book Name</th>
+            </tr> </thead>
+            
+              <%if(item1.length!=0){
+                var i=1;
+                 item1.forEach(function(data){   
+                  %>
+              <tr>
+              <td><%=i; %></td>
+              <td><%=data1.first_name %></td>
+              <td><%=data1.last_name %></td>
+              <td><%=data1.fty_id %></td>
+              <td><%=data1.semester %></td>
+              <td><%=data1.subject_name %></td>
+              <td><%=data1.bookid %></td>
+              <td><%=data1.bookname %></td>
+              </tr>
+              <%  i++; }) %>
+              <% } else{ %>
+                <tr>
+                    <td colspan="8">No Data Found</td>
+                </tr>
+            <% } %>
+              </table>
+  </section>
+
+  
+</body>
+
+</html>

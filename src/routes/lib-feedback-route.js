@@ -4,10 +4,7 @@ var db=require('../database');
  
 
 router.get('/lib-feedback-route', function(req, res, next) {
-  res.render('lib-feedback');
-});
 
-router.get('/dispfeedback', function(req, res, next) {
     var sql='SELECT * FROM feedback';
     db.query(sql, function(err, data, fields) {
     if (err) throw err;

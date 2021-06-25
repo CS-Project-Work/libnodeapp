@@ -1,0 +1,135 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./stylesheets/modifystocks.css">
+
+  <title> Librarian Dashboard</title>
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <h1 class="logo">
+      <a href="#">Departmental<span>
+          Digital Inventory</span></a>
+    </h1>
+    <div class="nav-wrap">
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+            <li><a href="/admin_das" class="dash">Home</a></li>
+            <li><a href="/manager">Stock Manager</a></li>
+            <li><a href="/stud_details">Student details</a>
+            <li><a href="/faculty_details">Faculty details</a>
+            <li><a href="/books_issued">Books issued</a>
+            <li><a href="/lib-feedback-route">Feedback responses</a>
+            <li><a href="/lib-support-route">Support queries</a>
+            <li><a href="/lib-req-route">Book requests</a>
+            <li><a href="/logout">Logout</a>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+  <div class="box">  
+    <h1>Add A New Book</h1>
+    <p class="fb"><h4>Please Enter The Details Of The Book</h4> </p>
+    <br><br>
+    <div class="container1">    
+      <form method = "post" action = "/add" >    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="name">Author Name</label>    
+          </div>    
+          <div class="col-75">  
+            <input type="text" id="name" placeholder="Author Name.." name="author"
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="email">Book Name</label>    
+          </div>    
+          <div class="col-75">    
+            <input type="text" id="email" placeholder="Book Name.." name="bookname"
+            style="color:white; font-size: 18px;" required>    
+          </div>    
+        </div>    
+        <div class="row">    
+            <div class="col-25">    
+              <label for="bname">Number Of Stocks</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="number" id="bname"  placeholder="Number of stocks.." name="numberofstocks"
+              style="color:rgb(27, 13, 13); font-size: 18px" required>    
+            </div>    
+          </div>        
+        <div class="row">    
+            <div class="col-25">    
+              <label for="aname">Semester</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="number" id="aname" placeholder="Semester.." name="semester"
+              style="color:rgb(27, 13, 13); font-size: 18px;" min="3" max="8" required>    
+            </div>    
+          </div>  
+             <div class="row">    
+            <div class="col-25">    
+              <label for="subject_name">Subject</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="bname"  placeholder="Subject.." name="subject_name"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>
+          <div class="row">    
+            <div class="col-25">    
+              <label for="subject_name">Image path</label>    
+            </div>    
+            <div class="col-75">    
+              <input type="text" id="bname"  placeholder="Image path.." name="book_img"
+              style="color:white; font-size: 18px;" required>    
+            </div>    
+          </div>
+        <br>    
+        <br>  
+        <br><br><br>
+      <div class="wrapper">
+      <button type= "submit" class="">
+        <span>ADD</span>
+      </button>
+    </div>  
+      </form>    
+    </div>
+  </div>
+    <br>
+ 
+     <div class="box1">  
+    <h1>Delete A Book</h1>
+    <p class="fb"><h4>Please Enter The Details Of The Book</h4> </p>
+    <br><br>
+    <div class="container1">    
+      <form method ="post" action = "/delete" onSubmit="Val(this)">    
+        <div class="row">    
+          <div class="col-25">    
+            <label for="name">Book ID</label>    
+          </div>    
+          <div class="col-75">  
+            <input type="number" id="name" placeholder="Book ID.." name="bookid"
+            style="color:rgb(27, 13, 13); font-size: 18px;" required>    
+          </div>    
+        </div>    
+          <br>    
+        <br>
+        <br><br><br>
+      <div class="wrapper">
+      <button type= "submit" class="">
+        <span>DELETE</span>
+      </button>
+    </div>  
+      </form>    
+    </div>
+  </div>
+    <br>
+
+</body>
+
+</html>

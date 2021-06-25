@@ -18,6 +18,9 @@ var routes13 = require('./routes/lib-support-route');
 var routes16 = require('./routes/faculty_dashboard-route');
 var routes17 = require('./routes/std-book-search');
 var routes18 = require('./routes/lib-stock-manager');
+var routes19 = require('./routes/lib-book-issued-route');
+var routes20 = require('./routes/profile');
+var routes21 = require('./routes/lib-details');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -100,6 +103,9 @@ app.use('/', routes12);
 app.use('/', routes13);
 app.use('/',routes17);
 app.use('/',routes18);
+app.use('/',routes19);
+app.use('/',routes20);
+app.use('/',routes21);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));

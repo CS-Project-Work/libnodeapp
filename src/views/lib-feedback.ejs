@@ -15,15 +15,15 @@
     <div class="nav-wrap">
       <nav class="main-nav" role="navigation">
         <ul class="unstyled list-hover-slide">
-          <li><a href="/admin_das" class="dash">Home</a></li>
-          <li><a href="mang.html">Stock Manager</a></li>
-          <li><a href="login.html">Student details</a>
-          <li><a href="login.html">Faculty details</a>
-          <li><a href="login.html">Books issued</a>
-          <li><a href="/lib-feedback-route">Feedback responses</a>
-          <li><a href="login.html">Support queries</a>
-          <li><a href="login.html">Book requests</a>
-          <li><a href="/logout">Logout</a>
+          <li><a href="/admin_das">Home</a></li>
+        <li><a href="/manager">Stock Manager</a></li>
+        <li><a href="/stud_details">Student details</a>
+        <li><a href="/faculty_details">Faculty details</a>
+        <li><a href="/books_issued">Books issued</a>
+        <li><a href="/lib-feedback-route"class="dash" >Feedback responses</a>
+        <li><a href="/lib-support-route">Support queries</a>
+        <li><a href="/lib-req-route">Book requests</a>
+        <li><a href="/logout">Logout</a>
         </ul>
       </nav>
 
@@ -31,39 +31,40 @@
   </header>
   <section class="info">
     <div class="container">
-        <ul class="responsive-table">
-          <li class="table-header">
-         
-            <div class="col S.No">S.No</div>
-            <div class="col first_name">First Name</div>
-            <div class="col last_name">Last Name</div>
-            <div class="col email_address">Email</div>
-            <div class="col rating">Rating</div>
-            <div class="col availabilty">Availabilty of books</div>
-            <div class="col ease_of_access">Ease of Access</div>
-            <div class="col comments">Comment</div>
-          </li>          
-         
-          <li class="table-row">
-            <%if(item.length!=0){
-                var i=1;
-                item.forEach(function(data){   
-                %>
-            <div class="col S.No" data-label="S.No"><%=i; %></div>
-            <div class="col first_name" data-label="first_name"><%=data.first_name %></div>
-            <div class="col last_name" data-label="last_name"><%=data.last_name %></div>
-            <div class="col email_address" data-label="email_address"><%=data.email_address %></div>
-            <div class="col rating" data-label="rating"><%=data.rating %></div>
-            <div class="col availability" data-label="availability"><%=data.availability %></div>
-            <div class="col ease_of_access" data-label="ease_of_access"><%=data.ease_of_access %></div>
-            <div class="col comments" data-label="comments"><%=data.comments %></div>
-            <%  i++; }) %>
-        <% } else{ %>
+      <table>
+    
+        <thead><tr>
+          <th>S.No </th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Rating</th>
+          <th>Availability</th>
+          <th>Ease of access</th>
+          <th>Comments</th>
+        </tr> </thead>
+        
+          <%if(item.length!=0){
+            var i=1;
+             item.forEach(function(data){   
+              %>
+          <tr>
+          <td><%=i; %></td>
+          <td><%=data.first_name %></td>
+          <td><%=data.last_name %></td>
+          <td><%=data.email_address %></td>
+          <td><%=data.rating %></td>
+          <td><%=data.availability %></td>
+          <td><%=data.ease_of_access %></td>
+          <td><%=data.comments %></td>
+          </tr>
+          <%  i++; }) %>
+          <% } else{ %>
             <tr>
                 <td colspan="7">No Data Found</td>
             </tr>
         <% } %>
-          </li>
+          </table>
   </section>
 
   
