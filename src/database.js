@@ -1,6 +1,5 @@
 var express = require('express');
 var mysql = require('mysql');
-var router = express.Router();
 var conn = mysql.createConnection({
   host: 'localhost', // assign your host name
   user: 'nodeapp',      //  assign your database username

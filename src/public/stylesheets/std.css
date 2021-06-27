@@ -278,3 +278,9 @@ h1{
  color: #34495e;
  text-align:center;
 }
+
+.dash {
+	background: #444147;
+		border-right: 5px solid white;
+		padding: 15px 30px 15px 20px;
+	}

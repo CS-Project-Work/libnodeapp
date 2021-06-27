@@ -3,6 +3,15 @@
     <link rel="stylesheet"  href="/stylesheets/std.css">
     <meta id="sem" content=" <%= sems %> "/>
     <meta id="primary_key"  content = "<%= item[0].usn %>"/>
+    <%if(item2.length!=0){
+      var i=0;
+       item2.forEach(function(data){   
+        %>
+    <meta id="bookid[<%=i%>]"  content = "<%= data.bookid %>"/>
+    <% i++;}) %>
+    <% } %> 
+    <meta id="sembookscount"  content = "<%= data3.sembookscount %>"/>
+    <meta id="issuecount"  content = "<%= data1[0].usncount %>"/>
     <title>
         Book Search
     </title>
@@ -45,7 +54,7 @@
   </header>
      
   <br><h1>Search books for Semester <%= sems %><br>
-    <h1>Number of books issued: </h1><h1 id="count_val">0</h1>
+    <h1>Number of books issued: </h1><h1 id="count_val"><%= data1[0].usncount %></h1>
     <div id="wrapper">
 
     </div>

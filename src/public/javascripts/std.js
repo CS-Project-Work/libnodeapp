@@ -47,14 +47,12 @@ function get_count(num,book_id,student,usn){
   if(count_var<3&&button_var[num].innerHTML==="Issue"){
     count_var++;
     document.getElementById("count_val").innerHTML = count_var.toString();
-    var msg = httpPost(`book/issue?type=${student}&primary_key=${usn}&book_id=${book_id}`);
-    alert(msg);
+    httpPost(`book/issue?type=${student}&primary_key=${usn}&book_id=${book_id}`);
   }
   else if(button_var[num].innerHTML==="Return"&&count_var>0){
     count_var--;
     document.getElementById("count_val").innerHTML = count_var.toString();
-    var msg = httpPost(`book/return?type=${student}&primary_key=${usn}&book_id=${book_id}`);
-    alert(msg);
+    httpPost(`book/return?type=${student}&primary_key=${usn}&book_id=${book_id}`);    
   }
   else{
     alert("You have reached the maximum amount of books that are issued to a student!");
@@ -69,6 +67,7 @@ function generate(subject_name, data){
   var wrapper = document.getElementById('wrapper');
   var element = document.querySelector('meta[id="primary_key"]');
   var usn = element && element.getAttribute("content");
+  var count_books = parseInt(document.getElementById("count_val").innerHTML);
   var subject_heading = document.createElement('h1');
   subject_heading.innerHTML = subject_name;
   var line_break1 = document.createElement('br');
@@ -90,7 +89,18 @@ function generate(subject_name, data){
     book_author.innerHTML = data[i]['author'];
     var issue_button = document.createElement('button');
     issue_button.className = 'btn';
-    issue_button.innerHTML = 'Issue';
+    let flag=0;  
+    let bookidissued = new Array();
+    for(k=0;k<count_books;k++) {
+    var element2 = document.querySelector('meta[id="bookid['+k+']"');
+    bookidissued[k] = element2 && element2.getAttribute("content");
+    console.log(bookidissued[k]);
+        if(data[i]['bookid']==bookidissued[k]) 
+        flag=1;
+        break; 
+    }
+    if(flag==0) {issue_button.innerHTML = 'Issue'; }
+    else {issue_button.innerHTML = 'Return';}
     let button_num_val = button_num;
     let book_id = data[i]['bookid'];
     let student = 'student';

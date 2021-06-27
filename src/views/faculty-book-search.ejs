@@ -2,6 +2,14 @@
 <head>
     <link rel="stylesheet"  href="/stylesheets/std.css">
     <meta id="sem" content=" <%= sems %> "/>
+    <meta id="primary_key"  content = "<%= item[0].fty_id %>"/>
+    <%if(item2.length!=0){
+      var i=0;
+       item2.forEach(function(data){   
+        %>
+    <meta id="bookid[<%=i%>]"  content = "<%= data.bookid %>"/>
+    <% i++;}) %>
+    <% } %> 
     <title>
         Book Search
     </title>

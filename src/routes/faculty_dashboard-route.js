@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var db=require('../database');
 
 router.get('/faculty_das', function(req, res, next) {
     if(req.session.loggedinUser){

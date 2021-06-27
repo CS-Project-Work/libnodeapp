@@ -1,73 +1,92 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="./stylesheets/lib-feedback.css">
+    <link rel="stylesheet" href="./stylesheets/lib-feedback.css">
 
-  <title> Librarian Dashboard</title>
+    <title> Feedback Collection</title>
 </head>
 
 <body>
-  <header class="header" role="banner">
-    <h1 class="logo">
-      <a href="#">Departmental<span>
+    <header class="header" role="banner">
+        <h1 class="logo">
+            <a href="#">Departmental<span>
           Digital Inventory</span></a>
-    </h1>
-    <div class="nav-wrap">
-      <nav class="main-nav" role="navigation">
-        <ul class="unstyled list-hover-slide">
-          <li><a href="/admin_das">Home</a></li>
-        <li><a href="/manager">Stock Manager</a></li>
-        <li><a href="/stud_details">Student details</a>
-        <li><a href="/faculty_details">Faculty details</a>
-        <li><a href="/books_issued">Books issued</a>
-        <li><a href="/lib-feedback-route"class="dash" >Feedback responses</a>
-        <li><a href="/lib-support-route">Support queries</a>
-        <li><a href="/lib-req-route">Book requests</a>
-        <li><a href="/logout">Logout</a>
-        </ul>
-      </nav>
+        </h1>
+        <div class="nav-wrap">
+            <nav class="main-nav" role="navigation">
+                <ul class="unstyled list-hover-slide">
+                    <li><a href="/admin_das">Home</a></li>
+                    <li><a href="/manager">Stock Manager</a></li>
+                    <li><a href="/stud_details">Student details</a>
+                        <li><a href="/faculty_details">Faculty details</a>
+                            <li><a href="/books_issued">Books issued</a>
+                                <li><a href="/lib-feedback-route" class="dash">Feedback responses</a>
+                                    <li><a href="/lib-support-route">Support queries</a>
+                                        <li><a href="/lib-req-route">Book requests</a>
+                                            <li><a href="/logout">Logout</a>
+                </ul>
+            </nav>
 
-    </div>
-  </header>
-  <section class="info">
-    <div class="container">
-      <table>
-    
-        <thead><tr>
-          <th>S.No </th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Rating</th>
-          <th>Availability</th>
-          <th>Ease of access</th>
-          <th>Comments</th>
-        </tr> </thead>
-        
-          <%if(item.length!=0){
+        </div>
+    </header>
+    <h3>Users Requested for Feedback :</h3>
+    <section class="info">
+        <div class="container">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>S.No </th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Rating</th>
+                        <th>Availability</th>
+                        <th>Ease of access</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+
+                <%if(item.length!=0){
             var i=1;
              item.forEach(function(data){   
               %>
-          <tr>
-          <td><%=i; %></td>
-          <td><%=data.first_name %></td>
-          <td><%=data.last_name %></td>
-          <td><%=data.email_address %></td>
-          <td><%=data.rating %></td>
-          <td><%=data.availability %></td>
-          <td><%=data.ease_of_access %></td>
-          <td><%=data.comments %></td>
-          </tr>
-          <%  i++; }) %>
-          <% } else{ %>
-            <tr>
-                <td colspan="7">No Data Found</td>
-            </tr>
-        <% } %>
-          </table>
-  </section>
+                    <tr>
+                        <td>
+                            <%=i; %>
+                        </td>
+                        <td>
+                            <%=data.first_name %>
+                        </td>
+                        <td>
+                            <%=data.last_name %>
+                        </td>
+                        <td>
+                            <%=data.email_address %>
+                        </td>
+                        <td>
+                            <%=data.rating %>
+                        </td>
+                        <td>
+                            <%=data.availability %>
+                        </td>
+                        <td>
+                            <%=data.ease_of_access %>
+                        </td>
+                        <td>
+                            <%=data.comments %>
+                        </td>
+                    </tr>
+                    <%  i++; }) %>
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="7">No Data Found</td>
+                            </tr>
+                            <% } %>
+            </table>
+    </section>
 
-  
+
 </body>
 
 </html>

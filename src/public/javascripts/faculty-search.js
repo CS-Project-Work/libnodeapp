@@ -31,7 +31,7 @@ function Cancel(num){
   var togbutton = document.getElementsByClassName("btn");
 
   if(togbutton[num].innerHTML === "Issue") {
-    togbutton[num].innerHTML = "Cancel";
+    togbutton[num].innerHTML = "Return";
   }
   else
     {
@@ -41,16 +41,21 @@ function Cancel(num){
 }
 
 
-function get_count(num){
+function get_count(num,book_id,faculty,fty_id){
   var button_var = document.getElementsByClassName("btn");
   var count_var = parseInt(document.getElementById("count_val").innerHTML);
   if(count_var<7&&button_var[num].innerHTML==="Issue"){
     count_var++;
     document.getElementById("count_val").innerHTML = count_var.toString();
+    var msg = httpPost(`book/issue?type=${faculty}&primary_key=${fty_id}&book_id=${book_id}`);
+    alert(msg);
   }
-  else if(button_var[num].innerHTML==="Cancel"&&count_var>0){
+  else if(button_var[num].innerHTML==="Return"&&count_var>0){
     count_var--;
     document.getElementById("count_val").innerHTML = count_var.toString();
+    var msg = httpPost(`book/return?type=${faculty}&primary_key=${fty_id}&book_id=${book_id}`);
+    alert(msg);
+    
   }
   else{
     alert("You have reached the maximum amount of books that are issued to a faculty!");
@@ -63,6 +68,9 @@ var button_num = 0;
 
 function generate(subject_name, data){
   var wrapper = document.getElementById('wrapper');
+  var element = document.querySelector('meta[id="primary_key"]');
+  var fty_id = element && element.getAttribute("content");
+  var count_books = parseInt(document.getElementById("count_val").innerHTML);
   var subject_heading = document.createElement('h1');
   subject_heading.innerHTML = subject_name;
   var line_break1 = document.createElement('br');
@@ -84,9 +92,22 @@ function generate(subject_name, data){
     book_author.innerHTML = data[i]['author'];
     var issue_button = document.createElement('button');
     issue_button.className = 'btn';
-    issue_button.innerHTML = 'Issue';
+    let flag=0;  
+    let bookidissued = new Array();
+    for(k=0;k<count_books;k++) {
+    var element2 = document.querySelector('meta[id="bookid['+k+']"');
+    bookidissued[k] = element2 && element2.getAttribute("content");
+    console.log(bookidissued[k]);
+        if(data[i]['bookid']==bookidissued[k]) 
+        flag=1;
+        break; 
+    }
+    if(flag==0) {issue_button.innerHTML = 'Issue'; }
+    else {issue_button.innerHTML = 'Return';}
     let button_num_val = button_num;
-    issue_button.onclick = function(){get_count(button_num_val);Cancel(button_num_val);};
+    let book_id = data[i]['bookid'];
+    let faculty = 'faculty';
+    issue_button.onclick = function(){get_count(button_num_val,book_id,faculty,fty_id);Cancel(button_num_val);};
     button_num += 1;
     content.append(book_title);
     content.append(book_author);

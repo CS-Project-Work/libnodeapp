@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var router = express.Router();
 var cookieParser = require('cookie-parser');
 var routes1 = require('./routes/registration_route');
 var routes2 = require('./routes/login-route');
@@ -26,17 +27,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');;
 
-var facRouter = require('./routes/fac');;
+var usersRouter = require('./routes/users');;
 
 var app = express();
 // view engine setup
-
-app.use('/', indexRouter);
-
-app.use('/fac', facRouter);
 
 app.use('/users', usersRouter);
 app.set('views', path.join(__dirname, 'views'));
@@ -64,17 +59,16 @@ app.use(function(err, req, res, next) {
 
 var logger = require('morgan');
 var session = require('express-session');
-var facRouter = require('./routes/fac');
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
 app.use(session({
         secret: '123456cat',
         resave: false,
         saveUninitialized: true,
-        cookie: { maxAge: 60000 }
+        cookie: { maxAge: 900000 }
     }))
+
     // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -84,9 +78,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/fac', facRouter);
 
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', routes1);
 app.use('/', routes2);
@@ -101,6 +93,7 @@ app.use('/', routes10);
 app.use('/', routes11);
 app.use('/', routes12);
 app.use('/', routes13);
+app.use('/', routes16);
 app.use('/',routes17);
 app.use('/',routes18);
 app.use('/',routes19);

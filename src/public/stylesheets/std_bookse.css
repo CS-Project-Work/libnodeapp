@@ -9,6 +9,12 @@ body {
   
 }
 
+.dash {
+	background: #444147;
+		border-right: 5px solid white;
+		padding: 15px 30px 15px 20px;
+	}
+
 h2 {
 
 	font-weight: normal;
