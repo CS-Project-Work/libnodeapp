@@ -20,7 +20,7 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 ('Carl Hamacher Zvonko Vranesic Safwat Zaky','Computer Organization And Embedded Systems',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtUefN2X_Fv0Kvk7g5a71vy4KhMoj-KxhGw&usqp=CAU',3,'Computer Organization and Architecture'),
 ('Thomas Rauber, Gudula Runger','Parallel Programming for Multicore and Cluster Systems',5,'https://images.springer.com/sgw/books/medium/9783642378003.jpg',3,'Computer Organization and Architecture'),
 ('David A. Patterson, John L. Hennessy','Computer Organization and Design - The Hardware/Software Interface',5,'https://images-na.ssl-images-amazon.com/images/I/519FtuVhvcL._SX380_BO1,204,203,200_.jpg',3,'Computer Organization and Architecture'),
-('William Stallings','Computer Organization & Architecture',5,'encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBs8PtmNiiLcIisPPRiXRYLKbvD4yDmHrxQ&usqp=CAU',3,'Computer Organization and Architecture');
+('William Stallings','Computer Organization & Architecture',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygm-sSlcEkvBna7A-Lh0b23HgeyeTzmih1g&usqp=CAU',3,'Computer Organization and Architecture');
 
 insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values
 ('Herbert Schildt','Java the Complete Reference',5,'https://assetscdn1.paytm.com/images/catalog/product/9/97/9789339212094_81104/1563554899831_1.jpg?imwidth=320&impolicy=hq',3,'Object Oriented Programming with Java'),
@@ -38,7 +38,7 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 ('Horowitz, Sahni, Anderson Freed','Fundamentals of Data Structures in C',5,'https://i.pinimg.com/236x/3d/cf/17/3dcf1741e11d7a81c524b2fc68c0a584.jpg',3,'Data Structures'),
 ('Aaron M.Tenenbaum,Yedidyah Langsam,Moshe J. Augenstein','Data Structures using C',5,'https://www.pragationline.com/wp-content/uploads/2021/03/DATA-STRUCTURES-USING-C-AND-C-YEDIDYAH-LANGSAM-MOSHE-J.-AUGENSTEIN-ARON-M.-TENENBAUM.jpg',3,'Data Structures'),
 ('Robert L. Kruse, Clovis L.Tondo, Bruce P. Leung','Data structures and program design in C',5,'https://images-na.ssl-images-amazon.com/images/I/51eyW36STrL._SX359_BO1,204,203,200_.jpg',3,'Data Structures'),
-('A.M Padma Reddy','Data Structure using C',5,'https://drive.google.com/file/d/1HlqFcQ09xYwvakucqodeN1liXUUDmS9b/view',3,'Data Structures');
+('A.M Padma Reddy','Data Structure using C',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1PLt3C1-RtG6P9yze0FOoruqfpxBW2L9lrg&usqp=CAU',3,'Data Structures');
 
 insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values
 ('Advanced Microprocessor and peripherals','A K Ray and K M Bhurchandi.',5,'https://booksbeka.com/image/cache/catalog/ANI/download-550x550h.jpg',3,'Microprocessors and Microcontrollers'),
@@ -47,7 +47,7 @@ insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name
 ('Advanced Microprocessors and IBM - Pc Assembly Language Programming','Udaya Kumar and B. Uma shankar',5,'https://images-na.ssl-images-amazon.com/images/I/71pWc9xz69L.jpg',3,'Microprocessors and Microcontrollers');
 
 insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values
-('Seymour Lipchitz. M. Lipson','Discrete Mathematics',5,'https://drive.google.com/file/d/1EKp428gCvgsksP2OZWtgpmoMbjo9OUMd/view',3,'Statistics and Discrete Mathematics'),
+('Seymour Lipchitz. M. Lipson','Discrete Mathematics',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1wKSQxhnAI_sFCKerwFd49DluaBUPuoLlXw&usqp=CAU',3,'Statistics and Discrete Mathematics'),
 ('D. S. Chandrasekharaiah','Graph Theory and Combinatorics',5,'https://rukminim1.flixcart.com/image/312/312/kl9rssw0/book/7/0/u/discrete-mathematical-structures-iiird-sem-4th-edition-b-e-original-imagyfk6ayvgnmtf.jpeg?q=70',3,'Statistics and Discrete Mathematics'),
 ('B. V. Ramana','Higher Engineering Mathematics',10,'https://images-na.ssl-images-amazon.com/images/I/51Qp2TyOzGL._SX370_BO1,204,203,200_.jpg',3,'Statistics and Discrete Mathematics'),
 ('Kenneth H. Rosen','Discrete Mathematics and its Applications',3,'https://images-na.ssl-images-amazon.com/images/I/51E75M0Rm5L._SX374_BO1,204,203,200_.jpg',3,'Statistics and Discrete Mathematics');
@@ -80,21 +80,21 @@ insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name
 
 insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values
 ('Operating System Concepts','Abraham Silberschatz,Peter Baer Galvin and Greg Gagne',5,'https://media.wiley.com/product_data/coverImage300/55/11180937/1118093755.jpg',4,'Operating Systems'),
-('Modern Operating System3','Andrew S.Tanenbaum',5,'https://drive.google.com/file/d/12dneeQrEJ9vmvjghDkuO-0u5-agkJieh/view',4,'Operating Systems'),
-('Operating System: Internals and Design Principles','William Stallings',5,'https://drive.google.com/file/d/1IN4DczATRTBZpqPOWS0kLhIomRRNQHEA/view',4,'Operating Systems'),
-('Schaums Outline of Operating Systems','J. Archer Harris',5,'https://drive.google.com/file/d/1xPyB9jNGVQInT9w8XMNrVpyhatxBDu_A/view',4,'Operating Systems');
+('Modern Operating System3','Andrew S.Tanenbaum',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQ_AzogpFEQpoR9fHgQFdcZX4Mimfwyt8Yg&usqp=CAU',4,'Operating Systems'),
+('Operating System: Internals and Design Principles','William Stallings',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT4z6vW4HOLUlNKlqxkTmPAazgxadKyt9Fjw&usqp=CAU',4,'Operating Systems'),
+('Schaums Outline of Operating Systems','J. Archer Harris',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKodhZJtcLiron7aqXJSUcPP2BH5SdbyWe7w&usqp=CAU',4,'Operating Systems');
 
 insert into stocks(bookname,author,numberofstocks,book_img,semester,subject_name) values
 ('An Introduction to Constitution of India and Professional Ethics','Merunandan K.B. and B.R.Venkatesh',5,'https://images-na.ssl-images-amazon.com/images/I/51gJppe8xrL._SX326_BO1,204,203,200_.jpg',4,'Constitution of India, Professional Ethics and Human Rights'),
 ('Constitution of India &Professional Ethics& Human Rights','Phaneesh K. R., Sudha Publication',5,'https://www.cengage.co.in/Book_images_tn/9789386668479_tn.jpg',4,'Constitution of India, Professional Ethics and Human Rights'),
-('V.N. Shukla s Constitution of India','Mahendra Pal Singh',5,'https://drive.google.com/file/d/1szmXFT2UyEttA1gcrO3gjpa-qUDdSh0y/view',4,'Constitution of India, Professional Ethics and Human Rights'),
+('V.N. Shukla s Constitution of India','Mahendra Pal Singh',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWlTE3iKpCgu2ZTRAagtE-fkjIXWOKMa_KA&usqp=CAU',4,'Constitution of India, Professional Ethics and Human Rights'),
 ('Ethics in Engineering','Martin, W. Mike.,Schinzinger, Roland',5,'https://cdn01.sapnaonline.com/bk_images/932/9780071112932.jpg',4,'Constitution of India, Professional Ethics and Human Rights');
 
 /* 5th sem */
 
 insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values
 ('Stuart J. Russell','Artificial Intelligence',5,'https://images-na.ssl-images-amazon.com/images/I/51qRNHEQbvL._SX355_BO1,204,203,200_.jpg',5,'Artificial Intelligence'),
-('Elaine Rich','Artificial Intelligence',5,'https://drive.google.com/file/d/1_7QNvvdpTLB2Q2VszqFqbAeTwwAWgZFD/view?usp=sharing',5,'Artificial Intelligence'),
+('Elaine Rich','Artificial Intelligence',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZeVFgCYI3m0ZgRiKwFa9uQDALPWqVkJr4HQ&usqp=CAU',5,'Artificial Intelligence'),
 ('George F Luger','Artificial Intelligence',10,'https://freecomputerbooks.com/covers/Artificial-Intelligence-Structures-and-Strategies-for-Complex-Problem-Solving.jpg',5,'Artificial Intelligence'),
 ('WDavid L. Poole ','Artificial Intelligence',3,'https://images-na.ssl-images-amazon.com/images/I/51cWmPO2NBL.jpg',5,'Artificial Intelligence');
 
@@ -112,9 +112,9 @@ insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name
 
 
 insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values
-('Ian Somerville','Software Engineering',5,'https://drive.google.com/file/d/1fARKpuDLSBPGpFry6MuivaIOilHCwsiy/view?usp=sharing',5,'Software Engineering'),
+('Ian Somerville','Software Engineering',5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhntUsUg1mMhnA7bffxCUA9JwCv6zw7p9jeg&usqp=CAU',5,'Software Engineering'),
 ('Sari Lawrence  Pfleeger, Joanne m  Atlec','Software Engineering theory  and Practice',5,'https://images-na.ssl-images-amazon.com/images/I/51w9Jito5kL._SX360_BO1,204,203,200_.jpg',5,'Software Engineering'),
-('Waman S Jawadeka','Software Engineering  Principles and Practice',10,'https://drive.google.com/file/d/1wyjXGEtAE52oXOvALwPvK8njNxgcg0Ni/view?usp=sharing',5,'Software Engineering'),
+('Waman S Jawadeka','Software Engineering  Principles and Practice',10,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8TWuBAIL84KhCRRAuYDhSw79OeHEE2rBLPQ&usqp=CAU',5,'Software Engineering'),
 ('Rogers S Pressman ','Software Engineering: A  Practitioners Approach',3,'https://images-na.ssl-images-amazon.com/images/I/81c+Aj3ItcL.jpg',5,'Software Engineering');
 
 insert into stocks(author,bookname,numberofstocks,book_img,semester,subject_name) values
